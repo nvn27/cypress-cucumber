@@ -4,6 +4,8 @@ class LandingPage {
     pageHeading = "h1.heading";
     checkBoxesLink = "a[href='/checkboxes']"
     checkBoxes = "#checkboxes";
+    addRemoveElementsLink = "a[href='/add_remove_elements/']";
+    addRemoveElementsPageHeading = "#content";
 
     // element interactions
     verifyPgeHeadingText() {
@@ -19,6 +21,13 @@ class LandingPage {
         cy.get(this.checkBoxes).should('be.visible');
     }
 
+    navigateToAddRemoveElementsPage() {
+        cy.get(this.addRemoveElementsLink).click();
+    }
+
+    verifyAddRemoveElementsPageHeading() {
+        cy.get(this.addRemoveElementsPageHeading).should('be.visible');
+    }
 }
 
 module.exports = new LandingPage();

@@ -5,7 +5,6 @@ const path = require("path");
 
 module.exports = defineConfig({
   // allowCypressEnv: false,
-
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -16,7 +15,6 @@ module.exports = defineConfig({
           console.log(message);
 
           const filePath = path.join(__dirname, "cypress/logs/execution-logs.txt");
-
           // Create folder if not exists
           if (!fs.existsSync(path.dirname(filePath))) {
             fs.mkdirSync(path.dirname(filePath), { recursive: true });

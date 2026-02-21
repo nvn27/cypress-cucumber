@@ -18,6 +18,14 @@ Then('Verify checkboxes are present', () => {
     landingPage.verifyCheckboxesArePresent();
 })
 
+And('Navigate to Add Remove Elements page', () => {
+    landingPage.navigateToAddRemoveElementsPage();
+})
+
+Then('Verify Add Remove Elements page heading are present', () => {
+    landingPage.verifyAddRemoveElementsPageHeading();
+})
+
 
 
 
